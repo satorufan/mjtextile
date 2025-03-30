@@ -1,9 +1,6 @@
 .contact {
     font-family: "GabiaMaeumgyeol";
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -25,5 +22,127 @@
     }
     100% {
         opacity: 1; /* 끝나면 투명도 1 */
+    }
+  }
+
+
+  .contact-location {
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .contact-location-leftside,
+  .contact-location-rightside {
+    width: 50%;
+  }
+  
+  .contact-location-title {
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .contact-location-title-line {
+    margin-left: 10%;
+    margin-top: 8px;
+    height: 2px;
+    background-color: #4CAF50;
+    width: 40px;
+  }
+  
+  .contact-location-detail {
+    margin-top: 50px;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 10%;
+  }
+  
+  .contact-location-map {
+    height: 100%;
+  }
+
+
+
+
+  
+  
+  .contact-inquiry {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-inquiry-frame {
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    height: 400px;
+    width: 60%;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #ffffff58;
+  }
+
+  .contact-inquiry-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+  
+  .contact-inquiry-email,
+  .contact-inquiry-name,
+  .contact-inquiry-phone,
+  .contact-inquiry-company{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-inquiry-content {
+    width: 100%;
+  }
+  
+  .contact-inquiry-label {
+    font-size: 1.5rem;
+    color: rgb(90, 90, 90);
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .contact-inquiry-input {
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .contact-inquiry-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contact-location {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-location-leftside,
+    .contact-location-rightside {
+      margin: 20px 0;
+    }
+  
+    .contact-inquiry {
+      grid-template-columns: 1fr;
     }
   }
