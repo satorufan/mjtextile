@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "GabiaMaeumgyeol";
+    font-weight: normal;
+    src: url("../fonts/GabiaMaeumgyeol.ttf") format("truetype");
+  }
+
+.products {
+    font-family: "GabiaMaeumgyeol";
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* 시작 시 투명도 0 */
+    }
+    100% {
+        opacity: 1; /* 끝나면 투명도 1 */
+    }
+  }
+
+.products-banner {
+    width: 100%;
+    height: 700px;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 50px;
+    border-bottom: #555 3px solid;
+}
+
+.products-content {
+    width: 100%;
+    display: flex;
+}
+
+.products-leftmenu {
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-menu {
+    width: 100%;
+    height: 120px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-size 0.3s ease, width 1s ease, height 1s ease;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-size: 100%;
+    border: #c9c9c9 1px solid;
+    overflow: hidden;
+    filter: brightness(0.4);
+}
+
+.products-menu:hover {
+    width: 110%;
+}
+
+.products-menu.selected {
+    width: 110%;
+    height: 150px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-size: 100%;
+    border: #c9c9c9 1px solid;
+    overflow: hidden;
+    filter: brightness(1);
+}
+
+@keyframes scaleUp{
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 110%;
+    }
+}
+
+.products-leftmenu-product {
+    padding: 10px;
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(135deg, #ffffff 40%, #ffffff00 60%);
+}
+
+.products-menu:hover {
+    background-size: 110%;
+}
+
+
+
+
+
+
+.products-products {
+    margin-left: 10%;
+    width: 60%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.products-product {
+    position: absolute;
+}
+
+.products-product-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.products-product-title-line {
+    height: 4px;
+    background-color: #ff6600;
+    width: 5rem;
+    margin-bottom: 40px;
+}
+
+.products-product-detail {
+    font-size: 1.2rem;
+    color: #555;
+    height: 600px;
+}
+
+.products-product-detail img{
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .products-leftmenu {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .products-product {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .products-banner {
+        font-size: 2rem;
+    }
+}

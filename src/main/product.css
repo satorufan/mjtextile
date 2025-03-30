@@ -1,0 +1,90 @@
+.main-product {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    padding-top: 200px;
+}
+
+.product-title {
+    margin-left: 5%;
+}
+
+.product-title-txt {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.product-title-line {
+    width: 5rem;
+    height: 5px;
+    background-color: #ff6600;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    gap: 30px;
+    height: 600px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.product-item {
+    width: 20%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: space-between;
+    transition: background-size 0.5s ease;
+    align-items: center;
+    position: relative;
+    background-size: 300%; /* 기본 배경 크기 */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product-item:hover{
+    background-size: 330%;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.product-shortcut {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #d6b4b4;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute; /* 절대 위치로 설정 */
+    bottom: 10px; /* 아래에서 10px 거리 */
+    right: 10px; /* 오른쪽에서 10px 거리 */
+    transition: background-color 0.5s, color 0.3s ease;
+    border: solid 1px;
+}
+
+.product-item:hover .product-shortcut {
+    background-color: #ff0000;
+    color:#f8f8f8;
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column; /* 모바일에서는 세로로 나열 */
+        align-items: center;
+    }
+
+    .product-item {
+        width: 80%; /* 모바일에서는 아이템 너비를 줄임 */
+        margin-bottom: 20px;
+    }
+}

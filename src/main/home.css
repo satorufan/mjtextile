@@ -1,0 +1,100 @@
+.main-home {
+  position: relative;
+  width: 100%;
+  height: 704px;
+  overflow: hidden;
+  opacity: 0; /* 초기 opacity 0 */
+  transform: translateY(20px); /* 초기 위치를 아래로 설정 */
+  animation: fadeInUp 0.8s ease-in-out forwards; /* 애니메이션 적용 */
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0; /* 시작 시 투명도 0 */
+      transform: translateY(20px); /* 아래에서 시작 */
+  }
+  100% {
+      opacity: 1; /* 끝나면 투명도 1 */
+      transform: translateY(0); /* 원래 위치로 */
+  }
+}
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 700px;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+
+  .home-slogan0{
+    position: absolute;
+    top: 550px;
+    left: 10vw;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+  .home-slogan0.hidden {
+    transform: translateX(10%);
+    }
+
+  .home-slogan1{
+    position: absolute;
+    top: 40vh;
+    right: 10vw;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+  .home-slogan1.hidden {
+    transform: translateX(-10%);
+    }
+
+  .home-slogan2{
+    position: absolute;
+    top: 20vh;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+  .home-slogan2.hidden {
+    transform: translateY(-10%);
+    }
+  
+  button.prev,
+  button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.5s;
+    font-size: 20px;
+  }
+  
+  button.prev {
+    left: 0;
+    border-radius: 50%;
+  }
+  
+  button.next {
+    right: 0;
+    border-radius: 50%;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }

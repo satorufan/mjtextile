@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "GabiaMaeumgyeol";
+    font-weight: normal;
+    src: url("../fonts/GabiaMaeumgyeol.ttf") format("truetype");
+  }
+
+  .main {
+    font-family: "GabiaMaeumgyeol";
+  }

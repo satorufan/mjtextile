@@ -1,0 +1,78 @@
+.company-greeting {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* 시작 시 투명도 0 */
+    }
+    100% {
+        opacity: 1; /* 끝나면 투명도 1 */
+    }
+  }
+
+.company-about {
+    text-align: left;
+    width: 60%;
+}
+
+.company-line {
+    height: 4px;
+    background-color: #ff6600;
+    width: 5rem;
+}
+
+.company-about > div {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards; /* 애니메이션 적용 */
+}
+
+.company-about > div:nth-child(1) {
+    animation-delay: 0.5s; /* 첫 번째 텍스트 애니메이션 지연 */
+}
+.company-about > div:nth-child(2) {
+    animation-delay: 1s; /* 두 번째 텍스트 애니메이션 지연 */
+    margin-bottom: 40px;
+}
+.company-about > div:nth-child(3) {
+    animation-delay: 1.5s; /* 세 번째 텍스트 애니메이션 지연 */
+    margin-bottom: 30px;
+}
+.company-about > div:nth-child(4) {
+    animation-delay: 1.5s; /* 세 번째 텍스트 애니메이션 지연 */
+    margin-bottom: 30px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.company-about div {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+}
+
+.company-about div:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff; /* 제목을 좀 더 강조 */
+}
