@@ -6,7 +6,7 @@
 
 .contact-banner {
     width: 100%;
-    height: 500px;
+    height: 600px;
     font-size: 3rem;
     color: white;
     display: flex;
@@ -34,9 +34,11 @@
     border-bottom: 2px solid #ddd;
   }
   
-  .contact-location-leftside,
+  .contact-location-leftside {
+    width: 40%;
+  }
   .contact-location-rightside {
-    width: 50%;
+    width: 60%;
   }
   
   .contact-location-title {
@@ -71,38 +73,119 @@
 
 
   
-  
   .contact-inquiry {
-    height: 700px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    padding-top: 10vh;
+  }
+
+  .contact-inquiry-left{
+    border: solid white 10px;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+  }
+  
+  .contact-inquiry-left-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15vh; /* 각 항목 간의 간격 */
+  }
+  
+  .contact-inquiry-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .contact-inquiry-item-title {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .contact-inquiry-item-detail {
+    font-size: 1rem;
   }
 
-  .contact-inquiry-frame {
+  .contact-inquiry-right-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .contact-inquiry-right-title-line {
+    height: 4px;
+    background-color: #ff6600;
+    width: 3rem;
+    margin-left: 120px;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .contact-location {
+      height: 700px;
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: #fff;
+      border-bottom: 2px solid #ddd;
+    }
+    .contact-location-leftside {
+      width: 100%;
+      height: 0px;
+    }
+    .contact-location-rightside {
+      width: 100%;
+    }
+
+    .contact-location-map {
+      height: 100%;
+    }
+
+    .contact-inquiry-left-content {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8vh; /* 각 항목 간의 간격 */
+    }
+  }
+  
+  /* .contact-inquiry {
+    height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    height: 400px;
-    width: 60%;
+  } */
+
+  /* .contact-inquiry-frame {
+    height: 65vh;
+    width: 50%;
     border-radius: 20px;
     padding: 40px;
     background-color: #ffffff58;
+    overflow: auto;
   }
 
   .contact-inquiry-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
   }
   
   .contact-inquiry-email,
+  .contact-inquiry-phone {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
   .contact-inquiry-name,
-  .contact-inquiry-phone,
-  .contact-inquiry-company{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  .contact-inquiry-company {
+    width: 80%;
+    margin-bottom: 20px;
+    justify-self: end;
   }
 
   .contact-inquiry-content {
@@ -117,26 +200,50 @@
   }
   
   .contact-inquiry-input {
-    height: 50px;
+    font-family: "GabiaMaeumgyeol";
+    width: 100%;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 20px;
     color: #333;
     background-color: #fff;
     margin-bottom: 20px;
+  }
+
+  .contact-inquiry-input-content {
+    font-family: "GabiaMaeumgyeol";
+    width: 100%;
+    resize: none;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 20px;
+    overflow: auto;
   }
   
   .contact-inquiry-input:focus {
     outline: none;
     border-color: #4CAF50;
   }
-  
-  @media screen and (max-width: 768px) {
-    .contact-location {
-      flex-direction: column;
-      align-items: center;
-    }
-  
+
+  .contact-inquiry-submit {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: end;
+  }
+   */
+/*   
     .contact-location-leftside,
     .contact-location-rightside {
       margin: 20px 0;
@@ -144,5 +251,4 @@
   
     .contact-inquiry {
       grid-template-columns: 1fr;
-    }
-  }
+    } */
