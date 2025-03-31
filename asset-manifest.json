@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mjtex/static/css/main.d8687645.css",
-    "main.js": "/mjtex/static/js/main.71f393e9.js",
+    "main.js": "/mjtex/static/js/main.801f91e6.js",
     "static/js/453.b1ae372a.chunk.js": "/mjtex/static/js/453.b1ae372a.chunk.js",
     "static/media/greet.gif": "/mjtex/static/media/greet.4b68f430666cde292b03.gif",
     "static/media/banner.jpg": "/mjtex/static/media/banner.c5116fe2d86dc568dce3.jpg",
@@ -32,11 +32,11 @@
     "static/media/logo_nobg.png": "/mjtex/static/media/logo_nobg.adb788bfa9be283f762d.png",
     "index.html": "/mjtex/index.html",
     "main.d8687645.css.map": "/mjtex/static/css/main.d8687645.css.map",
-    "main.71f393e9.js.map": "/mjtex/static/js/main.71f393e9.js.map",
+    "main.801f91e6.js.map": "/mjtex/static/js/main.801f91e6.js.map",
     "453.b1ae372a.chunk.js.map": "/mjtex/static/js/453.b1ae372a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8687645.css",
-    "static/js/main.71f393e9.js"
+    "static/js/main.801f91e6.js"
   ]
 }
