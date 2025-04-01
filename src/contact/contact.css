@@ -30,7 +30,6 @@
     height: 700px;
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
     border-bottom: 2px solid #ddd;
   }
   
@@ -67,6 +66,7 @@
   
   .contact-location-map {
     height: 100%;
+    background-size: 1000px;
   }
 
 
@@ -74,6 +74,7 @@
 
   
   .contact-inquiry {
+    background-color: #333;
     height: 100vh;
     display: grid;
     grid-template-columns: 4fr 2fr;
@@ -126,30 +127,35 @@
   }
 
   
-  @media screen and (max-width: 768px) {
-    .contact-location {
+  @media screen and (max-width: 1000px) {
+    /* .contact-location {
       height: 700px;
       display: grid;
-      grid-template-columns: 1fr;
-      background-color: #fff;
       border-bottom: 2px solid #ddd;
+      border: solid 1px;
     }
     .contact-location-leftside {
-      width: 100%;
-      height: 0px;
+      width: 1000px;
     }
+    .contact-location-title {
+      margin-top: 5%;
+      margin-left: 10%;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
+
     .contact-location-rightside {
       width: 100%;
+      height: 500px;
     }
 
     .contact-location-map {
       height: 100%;
-    }
+    } */
 
     .contact-inquiry-left-content {
       width: 90%;
-      display: grid;
-      grid-template-columns: 1fr;
       gap: 8vh; /* 각 항목 간의 간격 */
     }
   }

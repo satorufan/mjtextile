@@ -43,8 +43,7 @@ function Contact () {
                     <div className='contact-location-map'
                     style={{
                         backgroundImage: `url(${location})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
+                        backgroundPosition: '100% 100%',
                         backgroundRepeat: 'no-repeat'
                     }}>
                         
@@ -56,7 +55,7 @@ function Contact () {
             style={{
                 backgroundImage: `url(${inquiry})`,
                 backgroundSize: 'cover',
-                backgroundPosition: '0% 100%',
+                backgroundPosition: '50% 100%',
                 backgroundRepeat: 'no-repeat'
             }}>
                 <div className='contact-inquiry-left'>

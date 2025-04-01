@@ -44,13 +44,13 @@
     transition: background-size 0.5s ease;
     align-items: center;
     position: relative;
-    background-size: 300%; /* 기본 배경 크기 */
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 500px;
 }
 
 .product-item:hover{
-    background-size: 330%;
+    background-size: 400%;
 }
 
 .product-name {
@@ -77,14 +77,27 @@
     color:#f8f8f8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .main-product {
+        display: block;
+    }
+
     .product-list {
-        flex-direction: column; /* 모바일에서는 세로로 나열 */
+        flex-direction: column;
         align-items: center;
+        padding-left: 0%;
+        padding-right: 5%;
     }
 
     .product-item {
-        width: 80%; /* 모바일에서는 아이템 너비를 줄임 */
-        margin-bottom: 20px;
+        width: 80%;
+        margin-bottom: 10px;
+        height: 100%;
+        color: white;
+        background-size: 1000px;
+    }
+
+    .product-item:hover{
+        background-size: 100%;
     }
 }

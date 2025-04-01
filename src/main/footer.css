@@ -79,15 +79,3 @@
     text-align: center;
     margin-top: 30px;
 }
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-menu {
-        align-items: center;
-    }
-}

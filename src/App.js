@@ -11,7 +11,7 @@ import Contact from "./contact/Contact";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <nav className="nav-bar">
           <Link to="/"><img src={logo}></img></Link>
           <Link to="/company" style={{ textDecoration: "none"}}><div>COMPANY</div></Link>

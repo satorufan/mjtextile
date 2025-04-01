@@ -25,12 +25,13 @@
 
 
 .about-description-img {
-    width: 15%; /* 이미지의 너비 설정 */
-    height: 700px; /* 고정 높이 설정 */
+  min-width: 150px;
+    width: 15%;
+    height: 700px;
     overflow: hidden;
-    justify-content: center; /* 이미지가 가로로 중앙에 정렬되도록 설정 */
-    align-items: center; /* 이미지가 세로로 중앙에 정렬되도록 설정 */
-    position: relative; /* 부모 요소에 위치를 설정하여 그라데이션을 덧붙입니다 */
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .about-description-img::before {
@@ -76,6 +77,24 @@
     }
   }
 
+  @keyframes slideleft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+
+  @keyframes slideright {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+  }
+
 .about-description-img img {
     height: 700px;
     object-fit: cover; /* 이미지를 부모 요소에 맞게 자르면서 중앙에 배치 */
@@ -84,21 +103,22 @@
 
 .about-description-elem {
     align-items: center;
+    justify-self: center;
     position: relative;
-    width: 50%;
+    width: 60%;
 }
 
 .about-description-elem-section {
     padding: 10%;
     text-align: center;
     width: 100%;
-}
-
-.about-description-elem-slogan {
     position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
     top: 50%; /* 세로 중앙 정렬 */
     left: 50%; /* 가로 중앙 정렬 */
     transform: translate(-50%, -50%); /* 정확한 중앙 위치로 맞추기 위해 translate 사용 */
+}
+
+.about-description-elem-slogan {
     width: 100%;
     opacity: 0; /* 처음에 보이지 않도록 설정 */
     transition: opacity 1s ease-in-out; /* 슬라이드 전환 애니메이션 */
@@ -122,6 +142,10 @@
 
 
 .about-slider {
+  position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
+    top: 50%; /* 세로 중앙 정렬 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 정확한 중앙 위치로 맞추기 위해 translate 사용 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,14 +194,9 @@
     background-color: #000000;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .about-slider-button {
       font-size: 1.5rem;
-    }
-    
-    .indicator-dot {
-      width: 8px;
-      height: 8px;
     }
   }
   
