@@ -15,14 +15,15 @@ function Greeting () {
                 <div className='company-line'></div>
 
                 <div>
-                    We produce a wide range of products. <br/>
-                    For example, protective clothing, heavy denier, outdoor clothing and bags, backpacks, golf wear, etc.,<br/>
-                    from low denier products of 15D and 20D to high denier products of 1000D or more.<br/>
-                    Textiles for flight jackets and motorcycle wear are also available.
+                    MJ TEX Co.,Ltd is a company specialized in textiles with a focus on key values such as the top quality and the customer satisfaction.  <br/>
+                    We are developing products for Paraglider, Parachute , Military Chute and all other outdoor fabrics.
+                    Our dedication to the quality management and interconnected production system for the entire process from weaving,
+                    dyeing and coating process. 
                 </div>
                 <div>
-                    Myungjin Textiles will keep its promises to customers with a sense of responsibility,<br/>
-                    meet the needs of its four major customers, and become a trusted company with continuous dedication.
+                    MJ TEX Co.,Ltd will honor our promised to the customers 
+                    with senses of responsibilities to meet the needs of our customers 
+                    and be a trusted company with our continued dedication. 
                 </div>
             </div>
         </div>

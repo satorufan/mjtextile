@@ -50,7 +50,7 @@
 }
 
 .product-item:hover{
-    background-size: 400%;
+    background-size: 600px;
 }
 
 .product-name {
@@ -98,6 +98,6 @@
     }
 
     .product-item:hover{
-        background-size: 100%;
+        background-size: 1100px;
     }
 }

@@ -22,7 +22,7 @@
 }
 
 .footer-logo {
-    padding-left: 3%;
+    padding-left: 5%;
 
 }
 
@@ -36,7 +36,6 @@
 
 .footer-contact {
     width: 50%;
-    flex: 1;
     font-size: 1rem;
     line-height: 1.5;
     border-right: #ffffff 2px solid;
@@ -56,8 +55,10 @@
     width: 45%;
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
+    padding-top: 1rem;
     gap: 15px;
-    padding-left: 5%;
+    line-height: 1.5;
     font-weight: bold;
 }
 

@@ -12,6 +12,7 @@ import polycontent from './img/002.png';
 import nyloncontent from './img/003.png';
 import functionalcontent from './img/004.png';
 import mixedcontent from './img/005.png';
+import Productlist from './Productslist';
 
 const products = [
     <>
@@ -40,6 +41,10 @@ const products = [
 const menuProduct = [
     [cotton, 'COTTON'], [poly, 'POLYESTER'], [nylon, 'NYLON'], [functional, 'FUNCTIONAL'], [mixed, 'MIXED']
 ];
+// const menuProduct = Object.values(Productslist).map((product, idx) => {
+//     return [JSON.stringify(product.key), JSON.stringify(product.key)];
+// });
+console.log(Productlist)
 
 function Products() {
     const [currentIndex, setCurrentIndex] = useState(0);
