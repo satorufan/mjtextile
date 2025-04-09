@@ -116,10 +116,22 @@ const bagfabric = [
 ]
 
 const Productslist = {
-    paragliding : paragliding,
-    parachute : parachute,
-    military : military,
-    bagfabric : bagfabric
+    paragliding : {
+        name : 'PARAGLIDING',
+        items : paragliding
+    },
+    parachute : {
+        name : 'PARACHUTE',
+        items : parachute
+    },
+    military : {
+        name : 'MILITARY',
+        items : military
+    },
+    bagfabric : {
+        name : 'BAG FABRIC',
+        items : bagfabric
+    }
 }
 
 

@@ -12,7 +12,7 @@ import polycontent from './img/002.png';
 import nyloncontent from './img/003.png';
 import functionalcontent from './img/004.png';
 import mixedcontent from './img/005.png';
-import Productlist from './Productslist';
+import Productslist from './Productslist';
 
 const products = [
     <>
@@ -38,13 +38,26 @@ const products = [
     </>
 ]
 
-const menuProduct = [
-    [cotton, 'COTTON'], [poly, 'POLYESTER'], [nylon, 'NYLON'], [functional, 'FUNCTIONAL'], [mixed, 'MIXED']
-];
-// const menuProduct = Object.values(Productslist).map((product, idx) => {
-//     return [JSON.stringify(product.key), JSON.stringify(product.key)];
-// });
-console.log(Productlist)
+// const menuProduct = [
+//     [cotton, 'COTTON'], [poly, 'POLYESTER'], [nylon, 'NYLON'], [functional, 'FUNCTIONAL'], [mixed, 'MIXED']
+// ];
+const menuProduct = Object.entries(Productslist) // Productslist의 각 카테고리 (key, value) 쌍을 가져옴
+//   .flatMap(([category, products]) =>  // category는 카테고리 이름, products는 해당 카테고리의 제품 배열
+//     products.map(product => {
+//       // 각 product에서 필요한 정보를 추출
+//       const itemcode = product.itemcode || "No Itemcode";
+//       const width = product.width || "No Width";  // 값이 없으면 "No Width"
+//       const weight = product.weight || "No Weight";  // 값이 없으면 "No Weight"
+      
+//       return [
+//         JSON.stringify(category),  // 카테고리 이름을 문자열로 포함
+//         JSON.stringify(itemcode),
+//         JSON.stringify(width),
+//         JSON.stringify(weight)
+//       ]; // category, itemcode, width, weight를 포함한 배열 반환
+//     })
+//   );
+console.log(menuProduct)
 
 function Products() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,13 +85,13 @@ function Products() {
                             backgroundImage: `url(${product[0]})`,
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
-                        }}><div className='products-leftmenu-product'>{product[1]}</div></div>
+                        }}><div className='products-leftmenu-product'>{product[1].name}</div></div>
                     ))}
                 </div>
 
                 {/* 제품 목록 부분 */}
-                <div className="products-products">
-                    {products.map((product,idx) => (
+                {/* <div className="products-products">
+                    {menuProduct.map((product,idx) => (
                         <div 
                         key={idx}
                         className={`products-product ${idx === currentIndex ? 'selected' : ''}`}
@@ -87,6 +100,20 @@ function Products() {
                             transition: 'opacity 1s ease-in-out'
                         }}>
                             {product}
+                        </div>
+                    ))}
+                </div> */}
+                <div className="products-products">
+                    {menuProduct.map((product,idx) => (
+                        <div 
+                        key={idx}
+                        className={`products-product ${idx === currentIndex ? 'selected' : ''}`}
+                        style={{
+                            opacity: idx === currentIndex ? 1 : 0,
+                            transition: 'opacity 1s ease-in-out'
+                        }}>
+                            <div className="products-product-title">{product[1].name}</div>
+                            <div className="products-product-title-line"></div>
                         </div>
                     ))}
                 </div>
