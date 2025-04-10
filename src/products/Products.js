@@ -121,6 +121,7 @@ function Products() {
                         >
                             <div className="products-product-title">{product[1].name}</div>
                             <div className="products-product-title-line"></div>
+                            <div className='products-product-itemcode'>{product[1].items[0].itemcode}</div>
                         </div>
                     ))}
                 </div>
