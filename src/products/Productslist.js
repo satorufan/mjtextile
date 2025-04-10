@@ -1,4 +1,8 @@
 // width(mm), weight(g/sqm)
+import paraglidingimg from './img/paragliding.jpg';
+import parachuteimg from './img/parachute.jpg';
+import militaryimg from './img/military.jpg';
+import bagimg from './img/bag.jpg';
 
 
 const paragliding = [
@@ -117,18 +121,22 @@ const bagfabric = [
 
 const Productslist = {
     paragliding : {
+        img : paraglidingimg,
         name : 'PARAGLIDING',
         items : paragliding
     },
     parachute : {
+        img : parachuteimg,
         name : 'PARACHUTE',
         items : parachute
     },
     military : {
-        name : 'MILITARY',
+        img : militaryimg,
+        name : 'MILITARY PARACHUTE',
         items : military
     },
     bagfabric : {
+        img : bagimg,
         name : 'BAG FABRIC',
         items : bagfabric
     }

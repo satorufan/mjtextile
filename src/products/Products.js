@@ -1,42 +1,42 @@
 import './products.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import banner from './img/banner2.jpg';
-import cotton from './img/cotton.jpg';
-import poly from './img/poly.jpg';
-import nylon from './img/nylon.jpg';
-import functional from './img/functional.jpg';
-import mixed from './img/mixed.jpg';
-import cottoncontent from './img/001.png';
-import polycontent from './img/002.png';
-import nyloncontent from './img/003.png';
-import functionalcontent from './img/004.png';
-import mixedcontent from './img/005.png';
+// import cotton from './img/cotton.jpg';
+// import poly from './img/poly.jpg';
+// import nylon from './img/nylon.jpg';
+// import functional from './img/functional.jpg';
+// import mixed from './img/mixed.jpg';
+// import cottoncontent from './img/001.png';
+// import polycontent from './img/002.png';
+// import nyloncontent from './img/003.png';
+// import functionalcontent from './img/004.png';
+// import mixedcontent from './img/005.png';
 import Productslist from './Productslist';
 
-const products = [
-    <>
-        <div className="products-product-title">COTTON</div>
-        <div className="products-product-title-line"></div>
-        <div className="products-product-detail"><img src={cottoncontent}/></div>
-    </>,<>
-        <div className="products-product-title">POLYESTER</div>
-        <div className="products-product-title-line"></div>
-        <div className="products-product-detail"><img src={polycontent}/></div>
-    </>,<>
-        <div className="products-product-title">NYLON</div>
-        <div className="products-product-title-line"></div>
-        <div className="products-product-detail"><img src={nyloncontent}/></div>
-    </>,<>
-        <div className="products-product-title">FUNCTIONAL FABRIC</div>
-        <div className="products-product-title-line"></div>
-        <div className="products-product-detail"><img src={functionalcontent}/></div>
-    </>,<>
-        <div className="products-product-title">MIXED FABRIC</div>
-        <div className="products-product-title-line"></div>
-        <div className="products-product-detail"><img src={mixedcontent}/></div>
-    </>
-]
+// const products = [
+//     <>
+//         <div className="products-product-title">COTTON</div>
+//         <div className="products-product-title-line"></div>
+//         <div className="products-product-detail"><img src={cottoncontent}/></div>
+//     </>,<>
+//         <div className="products-product-title">POLYESTER</div>
+//         <div className="products-product-title-line"></div>
+//         <div className="products-product-detail"><img src={polycontent}/></div>
+//     </>,<>
+//         <div className="products-product-title">NYLON</div>
+//         <div className="products-product-title-line"></div>
+//         <div className="products-product-detail"><img src={nyloncontent}/></div>
+//     </>,<>
+//         <div className="products-product-title">FUNCTIONAL FABRIC</div>
+//         <div className="products-product-title-line"></div>
+//         <div className="products-product-detail"><img src={functionalcontent}/></div>
+//     </>,<>
+//         <div className="products-product-title">MIXED FABRIC</div>
+//         <div className="products-product-title-line"></div>
+//         <div className="products-product-detail"><img src={mixedcontent}/></div>
+//     </>
+// ]
 
 // const menuProduct = [
 //     [cotton, 'COTTON'], [poly, 'POLYESTER'], [nylon, 'NYLON'], [functional, 'FUNCTIONAL'], [mixed, 'MIXED']
@@ -61,6 +61,11 @@ console.log(menuProduct)
 
 function Products() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [visibleIndex, setVisibleIndex] = useState(currentIndex);
+
+    useEffect(() => {
+        setVisibleIndex(currentIndex);
+    }, [currentIndex]);
 
     return (
         <div className="products">
@@ -82,10 +87,10 @@ function Products() {
                         className={`products-menu ${currentIndex === idx ? 'selected' : ''}`}
                         onClick={()=>setCurrentIndex(idx)}
                         style={{
-                            backgroundImage: `url(${product[0]})`,
+                            backgroundImage: `url(${product[1].img})`,
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
-                        }}><div className='products-leftmenu-product'>{product[1].name}</div></div>
+                        }}><div className='products-leftmenu-product'>{product[1].name.slice(0, product[1].name.indexOf(' ') !== -1 ? product[1].name.indexOf(' ') : product[1].name.length)}</div></div>
                     ))}
                 </div>
 
@@ -105,13 +110,15 @@ function Products() {
                 </div> */}
                 <div className="products-products">
                     {menuProduct.map((product,idx) => (
-                        <div 
-                        key={idx}
-                        className={`products-product ${idx === currentIndex ? 'selected' : ''}`}
-                        style={{
-                            opacity: idx === currentIndex ? 1 : 0,
-                            transition: 'opacity 1s ease-in-out'
-                        }}>
+                        <div
+                            key={idx}
+                            className={`products-product ${idx === currentIndex ? 'selected' : ''}`}
+                            style={{
+                                opacity: idx === visibleIndex ? 1 : 0,
+                                visibility: idx === visibleIndex ? 'visible' : 'hidden',
+                                transition: 'opacity 1s ease-in-out, visibility 0s 0.5s', // opacity는 1초로 애니메이션, visibility는 1초 뒤에 바뀌도록
+                            }}
+                        >
                             <div className="products-product-title">{product[1].name}</div>
                             <div className="products-product-title-line"></div>
                         </div>

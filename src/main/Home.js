@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './home.css';
+import mainlogo from './img/home/mainlogo.jpg';
 import img1 from './img/home/lalit-kumar-uDoezY1cPLY-unsplash.jpg';
 import img2 from './img/home/fabric-5259683_1280.jpg';
 import img3 from './img/home/kevin-limbri-wPzxDaQm8fE-unsplash.jpg';
 
 const slogans = [
+    {
+        txt: <img className='main-mainlogo' src={mainlogo}></img>,
+        img: ''
+    },
     {
         txt: <div>The Best in Textile <br/> Myungjin Textile</div>,
         img: img1
@@ -98,7 +103,7 @@ function Home() {
                             transition: 'opacity 1.5s ease-in-out'
                         }}
                     >
-                        <div className={`home-slogan${idx} ${idx === currentIndex ? '' : 'hidden'}`}>
+                        <div className={`home-slogan${idx-1} ${idx === currentIndex ? '' : 'hidden'}`}>
                             {slogan.txt}
                         </div>
                     </div>

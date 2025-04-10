@@ -54,6 +54,7 @@
     right: 10vw;
     transform: translateX(0);
     transition: transform 1s ease-in-out;
+    text-align: right;
   }
   .home-slogan1.hidden {
     transform: translateX(-10%);
@@ -64,6 +65,7 @@
     top: 20vh;
     transform: translateX(0);
     transition: transform 1s ease-in-out;
+    text-align: center;
   }
   .home-slogan2.hidden {
     transform: translateY(-10%);

@@ -1,11 +1,14 @@
 import './product.css';
-import productbg from './img/product/bozhin-karaivanov-QL0X_Ny8hCo-unsplash.jpg';
+import Productslist from '../products/Productslist';
 import cotton from './img/product/susan-wilkinson-y9QJFGvdLWk-unsplash.jpg';
 import polyester from './img/product/moonstarious-project-_pIg9_Swzl8-unsplash.jpg';
 import nylon from './img/product/top-view-fabric-texture.jpg';
 import functional from './img/product/egor-myznik-Bw5MpZ7AAfo-unsplash.jpg';
 import mixed from './img/product/vitalijs-barilo-azMZaQCUyV8-unsplash.jpg';
 import { useNavigate } from 'react-router-dom';
+
+const products = Object.entries(Productslist);
+console.log(products)
 
 function Product() {
     const navigate = useNavigate();
@@ -22,7 +25,20 @@ function Product() {
             </div>
 
             <div className="product-list">
-                <div className="product-item"
+                {products.map((product, idx) => {
+                    return (
+                        <div className="product-item"
+                        onClick={()=>{navigate('/product')}}
+                        style={{
+                            backgroundImage: `url(${product[1].img})`,
+                        }}>
+                                <div className="product-name">{product[1].name}</div>
+                                <div className={`product-shortcut ${idx % 2 === 0 ? 'align-left' : ''}`}>shortcut →</div>
+                        </div>
+                    )
+                })}
+
+                {/* <div className="product-item"
                 onClick={()=>{navigate('/product')}}
                 style={{
                     backgroundImage: `url(${cotton})`, // backgroundImage를 문자열로 처리
@@ -65,7 +81,7 @@ function Product() {
                 }}>
                     <div className="product-name">MIXED FABRIC</div>
                     <div className="product-shortcut">shortcut →</div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
