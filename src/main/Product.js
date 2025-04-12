@@ -22,6 +22,7 @@ function Product() {
             <div className='product-title'>
                 <div className="product-title-txt">PRODUCT</div>
                 <div className='product-title-line'></div>
+                <div className="product-title-description">Myungjin Textiles provides the highest quality products including paragliding, parachutes, military parachutes, and bags.</div>
             </div>
 
             <div className="product-list">
@@ -32,7 +33,7 @@ function Product() {
                         style={{
                             backgroundImage: `url(${product[1].img})`,
                         }}>
-                                <div className="product-name">{product[1].name}</div>
+                                <div className={`product-name ${idx % 2 === 1 ? 'align-right' : ''}`}>{product[1].name}</div>
                                 <div className={`product-shortcut ${idx % 2 === 0 ? 'align-left' : ''}`}>shortcut →</div>
                         </div>
                     )

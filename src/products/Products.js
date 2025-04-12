@@ -121,7 +121,23 @@ function Products() {
                         >
                             <div className="products-product-title">{product[1].name}</div>
                             <div className="products-product-title-line"></div>
-                            <div className='products-product-itemcode'>{product[1].items[0].itemcode}</div>
+                            <div className='products-product-items'>
+                                <div className='products-product-itemcode-header'>ITEMCODE</div>
+                                <div className='products-product-description-header'>DESCRIPTION</div>
+                                <div className='products-product-width-header'>WIDTH</div>
+                                <div className='products-product-weight-header'>WEIGHT</div>
+                                {product[1].items.map((item, idx) => {
+                                    console.log(product)
+                                    return (
+                                        <>
+                                            <div className='products-product-itemcode'>{item.itemcode}</div>
+                                            <div className='products-product-description'>{item.description}</div>
+                                            <div className='products-product-width'>{item.width}</div>
+                                            <div className='products-product-weight'>{item.weight}</div>
+                                        </>
+                                    )
+                                })}
+                            </div>
                         </div>
                     ))}
                 </div>
