@@ -6,8 +6,6 @@
 }
 
 .main-about-description {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 20px; /* 이미지와 텍스트 간의 간격 */
 }
@@ -105,7 +103,7 @@
     align-items: center;
     justify-self: center;
     position: relative;
-    width: 60%;
+    width: 70%;
 }
 
 .about-description-elem-section {
@@ -141,10 +139,9 @@
 
 
 
-.about-slider {
-  position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
-    top: 50%; /* 세로 중앙 정렬 */
-    left: 50%; /* 가로 중앙 정렬 */
+  .about-slider {
+    position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
+    top: 50%;
     transform: translate(-50%, -50%); /* 정확한 중앙 위치로 맞추기 위해 translate 사용 */
     display: flex;
     align-items: center;
@@ -153,6 +150,7 @@
     position: absolute;
     top: 300px; /* 세로 중앙 정렬 */
     left: 50%; /* 가로 중앙 정렬 */
+    z-index: 1000;
   }
   
   .about-slider-button {
@@ -194,9 +192,31 @@
     background-color: #000000;
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 768px) {
     .about-slider-button {
       font-size: 1.5rem;
+    }
+
+    .about-description-img-elem-right {
+      display: none;
+    }
+
+    .about-description-elem-section {
+      padding: 10%;
+      text-align: center;
+      width: 60vw;
+      position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
+      top: 30%; /* 세로 중앙 정렬 */
+      left: 5%; /* 가로 중앙 정렬 */
+      transform: translate(-50%, -50%); /* 정확한 중앙 위치로 맞추기 위해 translate 사용 */
+    }
+
+    .about-slider {
+      transform: translate(-50%, -50%);
+      gap: 20px;
+      position: absolute;
+      top: 300px; /* 세로 중앙 정렬 */
+      left: 5%; /* 가로 중앙 정렬 */
     }
   }
   

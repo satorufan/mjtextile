@@ -1,6 +1,7 @@
 .company-greeting {
     width: 100%;
-    height: 800px;
+    height: 100vh;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +23,7 @@
 
 .company-about {
     text-align: left;
-    width: 60%;
+    width: 80%;
 }
 
 .company-line {
@@ -66,7 +67,7 @@
 }
 
 .company-about div {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #f1f1f1;
 }
@@ -75,4 +76,12 @@
     font-size: 2.5rem;
     font-weight: bold;
     color: #ffffff; /* 제목을 좀 더 강조 */
+}
+
+@media (max-width: 768px) {
+    .company-about div {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #f1f1f1;
+    }
 }

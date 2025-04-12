@@ -119,25 +119,28 @@ function Products() {
                                 transition: 'opacity 1s ease-in-out, visibility 0s 0.5s', // opacity는 1초로 애니메이션, visibility는 1초 뒤에 바뀌도록
                             }}
                         >
-                            <div className="products-product-title">{product[1].name}</div>
-                            <div className="products-product-title-line"></div>
-                            <div className='products-product-items'>
-                                <div className='products-product-itemcode-header'>ITEMCODE</div>
-                                <div className='products-product-description-header'>DESCRIPTION</div>
-                                <div className='products-product-width-header'>WIDTH</div>
-                                <div className='products-product-weight-header'>WEIGHT</div>
-                                {product[1].items.map((item, idx) => {
-                                    console.log(product)
-                                    return (
-                                        <>
-                                            <div className='products-product-itemcode'>{item.itemcode}</div>
-                                            <div className='products-product-description'>{item.description}</div>
-                                            <div className='products-product-width'>{item.width}</div>
-                                            <div className='products-product-weight'>{item.weight}</div>
-                                        </>
-                                    )
-                                })}
+                            {/* <div className="products-product-title">{product[1].name}</div> */}
+                            {/* <div className="products-product-title-line"></div> */}
+                            <div className="product-table">
+                                {/* Header */}
+                                <div className="product-row product-header">
+                                    <div className="product-cell itemcode">ITEMCODE</div>
+                                    <div className="product-cell description">DESCRIPTION</div>
+                                    <div className="product-cell width">WIDTH(mm)</div>
+                                    <div className="product-cell weight">WEIGHT(g/sqm)</div>
+                                </div>
+
+                                {/* Items */}
+                                {product[1].items.map((item, idx) => (
+                                    <div className="product-row" key={idx}>
+                                        <div className="product-cell itemcode">{item.itemcode}</div>
+                                        <div className="product-cell description">{item.description}</div>
+                                        <div className="product-cell width">{item.width}</div>
+                                        <div className="product-cell weight">{item.weight}</div>
+                                    </div>
+                                ))}
                             </div>
+
                         </div>
                     ))}
                 </div>

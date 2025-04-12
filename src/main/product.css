@@ -74,6 +74,7 @@
 
 .product-shortcut {
     width: 20%;
+    min-width: 100px;
     padding: 10px;
     font-size: 1rem;
     background-color: #d6b4b4;
@@ -92,15 +93,17 @@
     color:#f8f8f8;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .product-title{
         position: absolute;
         z-index: 1000;
         transform: translate(-50%, -50%);
         top: 60%;
         left: 50%;
-        width: 15rem;
-        height: 15rem;
+        max-width: 120px;
+        max-height: 120px;
+        width: 30vw;
+        height: 30vw;
         background-color: white;
         text-align: center;
         border-radius: 50%;
@@ -109,7 +112,7 @@
     
     .product-title-txt {
         position: absolute;
-        font-size: 2rem;
+        font-size: 3vw;
         text-transform: uppercase;
         transform: translate(-50%, -50%);
         top: 50%;
