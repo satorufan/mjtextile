@@ -6,7 +6,8 @@
 
 .contact-banner {
     width: 100%;
-    height: 600px;
+    min-height: 300px;
+    height: 80vh;
     font-size: 3rem;
     color: white;
     display: flex;
@@ -27,14 +28,16 @@
 
 
   .contact-location {
-    height: 700px;
+    min-height: 500px;
+    height: 60vh;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #ddd;
   }
   
   .contact-location-leftside {
-    width: 40%;
+    width: 30%;
+    margin-right: 10%;
   }
   .contact-location-rightside {
     width: 60%;
@@ -66,7 +69,7 @@
   
   .contact-location-map {
     height: 100%;
-    background-size: 1000px;
+    background-size: 800px;
   }
 
 
@@ -126,6 +129,58 @@
     margin-left: 120px;
   }
 
+  @media (max-width: 768px) {
+    .contact-location-rightside {
+      width: 50%;
+    }
+
+    .contact-location-map{
+      background-size: 120vh;
+    }
+
+    .contact-inquiry-left-content {
+      width: 90%;
+      min-width: 300px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1vh; /* 각 항목 간의 간격 */
+    }
+
+    .contact-inquiry-left{
+      border: solid white 10px;
+      width: 80%;
+      height: 80%;
+      margin-left: 10%;
+      padding-left: 5%;
+      display: flex;
+      justify-content: flex-start;
+      color: white;
+    }
+
+    .contact-inquiry-item-title {
+      width: 80%;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    .contact-inquiry-item-detail {
+      width: 80%;
+      font-size: 0.8rem;
+    }
+
+    .contact-inquiry-right-title{
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .contact-inquiry-right-title-line {
+      height: 4px;
+      background-color: #ff6600;
+      width: 3rem;
+      margin-left: 80px;
+    }
+  }
+
   
   @media screen and (max-width: 1000px) {
     /* .contact-location {
@@ -154,10 +209,6 @@
       height: 100%;
     } */
 
-    .contact-inquiry-left-content {
-      width: 90%;
-      gap: 8vh; /* 각 항목 간의 간격 */
-    }
   }
   
   /* .contact-inquiry {

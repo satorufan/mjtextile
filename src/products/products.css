@@ -23,7 +23,8 @@
 
 .products-banner {
     width: 100%;
-    height: 500px;
+    min-height: 300px;
+    height: 80vh;
     background-color: #2c3e50;
     color: #fff;
     display: flex;
@@ -33,7 +34,7 @@
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-bottom: #555 3px solid;
 }
 
@@ -142,8 +143,9 @@
 } */
 
 .product-table {
-    width: 65vw;
     /* border: 1px solid #ccc; */
+    width: 60vw;
+    overflow: auto;
 }
 
 .product-row {
@@ -153,6 +155,7 @@
 }
 
 .product-header {
+    min-width: max-content;
     background-color: #f5f5f5;
     font-weight: bold;
 }
@@ -167,15 +170,18 @@
 .product-cell.itemcode {
     /* flex: 2; */
     width: 20%;
+    min-width: 150px;
 }
 .product-cell.description {
     /* flex: 2; */
     width: 50%;
+    min-width: 300px;
 }
 .product-cell.width,
 .product-cell.weight {
     /* flex: 0.5; */
     width: 15%;
+    min-width: 100px;
 }
 
 
@@ -185,13 +191,19 @@
         height: 800px;
         display: block;
     }
+
+    .products-banner {
+        margin-bottom: 10px;
+    }
     
     .products-leftmenu {
-        width: 100%;
-        padding: 20px;
+        width: 90%;
         flex-direction: row;
-        height: 100px;
-        gap: 20px;
+        height: 10vh;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 20px;
+        justify-content: space-between;
     }
     
     .products-menu:hover {
@@ -199,9 +211,10 @@
     }
 
     .products-menu {
-        width: 15%;
+        width: 20%;
         min-width: 80px;
-        height: 100px;
+        height: 10vh;
+        min-height: 50px;
         font-size: 1.8vw;
         cursor: pointer;
         transition: background-size 0.3s ease, width 1s ease, height 1s ease;
@@ -215,7 +228,8 @@
 
     .products-menu.selected {
         width: 30%;
-        height: 100px;
+        height: 10vh;
+        min-height: 50px;
         font-size: 1.5vw;
         cursor: pointer;
         border-radius: 20px;
@@ -243,13 +257,13 @@
         width: 800px;
     } */
     .product-table {
-        width: 85vw;
+        width: 80vw;
         /* border: 1px solid #ccc; */
     }
     .product-cell {
         /* flex: 1; */
         padding: 5px 10px;
         text-align: center;
-        font-size: 1vw;
+        font-size: 0.7rem;
     }
 }
