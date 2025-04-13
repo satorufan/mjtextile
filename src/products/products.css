@@ -59,7 +59,7 @@
     transition: background-size 0.3s ease, width 1s ease, height 1s ease;
     border-radius: 20px;
     margin-bottom: 30px;
-    background-size: 120%;
+    background-size: 140%;
     border: #c9c9c9 1px solid;
     overflow: hidden;
     filter: brightness(0.4);
@@ -197,12 +197,9 @@
     }
     
     .products-leftmenu {
-        width: 90%;
+        width: 100%;
+        margin-left: 0%;
         flex-direction: row;
-        height: 10vh;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 20px;
         justify-content: space-between;
     }
     
@@ -213,14 +210,14 @@
     .products-menu {
         width: 20%;
         min-width: 80px;
-        height: 10vh;
+        height: 15vw;
         min-height: 50px;
         font-size: 1.8vw;
         cursor: pointer;
         transition: background-size 0.3s ease, width 1s ease, height 1s ease;
         border-radius: 20px;
         margin-bottom: 30px;
-        background-size: 250%;
+        background-size: 180%;
         border: #c9c9c9 1px solid;
         overflow: hidden;
         filter: brightness(0.4);
@@ -228,13 +225,13 @@
 
     .products-menu.selected {
         width: 30%;
-        height: 10vh;
+        height: 15vw;
         min-height: 50px;
         font-size: 1.5vw;
         cursor: pointer;
         border-radius: 20px;
         margin-bottom: 30px;
-        background-size: 150%;
+        background-size: 140%;
         border: #c9c9c9 1px solid;
         overflow: hidden;
         filter: brightness(1);

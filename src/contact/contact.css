@@ -130,6 +130,7 @@
   }
 
   @media (max-width: 768px) {
+    
     .contact-location-rightside {
       width: 50%;
     }
@@ -138,18 +139,26 @@
       background-size: 120vh;
     }
 
+    .contact-inquiry {
+      background-color: #333;
+      grid-template-columns: 1fr;
+      padding-top: 10vh;
+    }
+    
+
     .contact-inquiry-left-content {
       width: 90%;
       min-width: 300px;
       display: grid;
       grid-template-columns: 1fr;
       gap: 1vh; /* 각 항목 간의 간격 */
+      padding: 20px;
     }
 
     .contact-inquiry-left{
+      height: 300px;
       border: solid white 10px;
       width: 80%;
-      height: 80%;
       margin-left: 10%;
       padding-left: 5%;
       display: flex;
@@ -171,13 +180,15 @@
     .contact-inquiry-right-title{
       font-size: 2rem;
       font-weight: bold;
+      margin-left: 10vw;
+      bottom: 10vh;
     }
 
     .contact-inquiry-right-title-line {
       height: 4px;
       background-color: #ff6600;
       width: 3rem;
-      margin-left: 80px;
+      margin-left: 10vw;
     }
   }
 

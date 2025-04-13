@@ -141,7 +141,6 @@
 
   .about-slider {
     position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
-    top: 50%;
     transform: translate(-50%, -50%); /* 정확한 중앙 위치로 맞추기 위해 translate 사용 */
     display: flex;
     align-items: center;
@@ -197,26 +196,38 @@
       font-size: 1.5rem;
     }
 
-    .about-description-img-elem-right {
-      display: none;
+    /* .about-description-img-elem-right {
+      background: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 0) 100%);
+    } */
+
+    .about-description-elem {
+      align-items: center;
+      justify-self: center;
+      left: -50%;
+      top: 50%;
+      
     }
 
     .about-description-elem-section {
-      padding: 10%;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
       text-align: center;
-      width: 60vw;
+      width: 100vw;
       position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
       top: 30%; /* 세로 중앙 정렬 */
-      left: 5%; /* 가로 중앙 정렬 */
+      left: 100%; /* 가로 중앙 정렬 */
       transform: translate(-50%, -50%); /* 정확한 중앙 위치로 맞추기 위해 translate 사용 */
+      border-radius: 10px;
+      background: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 0) 100%);
     }
 
     .about-slider {
       transform: translate(-50%, -50%);
       gap: 20px;
       position: absolute;
-      top: 300px; /* 세로 중앙 정렬 */
-      left: 5%; /* 가로 중앙 정렬 */
+      top: 15vh; /* 세로 중앙 정렬 */
+      left: 100%; /* 가로 중앙 정렬 */
+      width: 100vw;
     }
   }
   

@@ -5,7 +5,7 @@
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 100vh;
 }
 
 .footer-top {

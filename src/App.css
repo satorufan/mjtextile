@@ -69,12 +69,18 @@
 
   .container-fluid{
     display: block;
-    width: 150%;
   }
 
-  .nav-item{
+  .nav-item {
     font-weight: bold;
+    font-size: 12px;
+    text-align: left;
     width: 100%;
+    border-radius: 10px;
+  }
+
+  .nav-item:hover {
+    background-color: #3333336a;
   }
 
 }
