@@ -23,6 +23,7 @@ function App() {
             <Link to="/company" style={{ textDecoration: "none"}}><div>COMPANY</div></Link>
             <Link to="/product" style={{ textDecoration: "none"}}><div>PRODUCT</div></Link>
             <Link to="/contact" style={{ textDecoration: "none"}}><div>CONTACT</div></Link>
+            <div> </div>
           </div>
 
           <div className="nav-bar-mobile">

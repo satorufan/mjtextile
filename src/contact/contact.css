@@ -7,7 +7,8 @@
 .contact-banner {
     width: 100%;
     min-height: 300px;
-    height: 80vh;
+    height: 50vh;
+    max-height: 600px;
     font-size: 3rem;
     color: white;
     display: flex;
@@ -78,7 +79,8 @@
   
   .contact-inquiry {
     background-color: #333;
-    height: 100vh;
+    height: 80vh;
+    min-height: 600px;
     display: grid;
     grid-template-columns: 4fr 2fr;
     padding-top: 10vh;
@@ -88,6 +90,7 @@
     border: solid white 10px;
     width: 80%;
     height: 80%;
+    min-height: 400px;
     margin-left: 10%;
     display: flex;
     align-items: center;
@@ -99,7 +102,7 @@
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15vh; /* 각 항목 간의 간격 */
+    gap: 10vh; /* 각 항목 간의 간격 */
   }
   
   .contact-inquiry-item {
@@ -136,13 +139,14 @@
     }
 
     .contact-location-map{
-      background-size: 120vh;
+      background-size: 100vh;
     }
 
     .contact-inquiry {
       background-color: #333;
       grid-template-columns: 1fr;
       padding-top: 10vh;
+      position: relative;
     }
     
 
@@ -161,6 +165,7 @@
       width: 80%;
       margin-left: 10%;
       padding-left: 5%;
+      margin-top: 100px;
       display: flex;
       justify-content: flex-start;
       color: white;
@@ -178,10 +183,11 @@
     }
 
     .contact-inquiry-right-title{
+      position: absolute;
       font-size: 2rem;
       font-weight: bold;
       margin-left: 10vw;
-      bottom: 10vh;
+      top: 50px;
     }
 
     .contact-inquiry-right-title-line {
@@ -189,6 +195,8 @@
       background-color: #ff6600;
       width: 3rem;
       margin-left: 10vw;
+      position: absolute;
+      top: 100px;
     }
   }
 
