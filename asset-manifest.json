@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mjtextile/static/css/main.983d6a4f.css",
-    "main.js": "/mjtextile/static/js/main.15f6147c.js",
+    "main.css": "/mjtextile/static/css/main.829f3349.css",
+    "main.js": "/mjtextile/static/js/main.2d239db3.js",
     "static/js/453.b1ae372a.chunk.js": "/mjtextile/static/js/453.b1ae372a.chunk.js",
     "static/media/greet.gif": "/mjtextile/static/media/greet.4b68f430666cde292b03.gif",
     "static/media/banner.jpg": "/mjtextile/static/media/banner.c5116fe2d86dc568dce3.jpg",
@@ -27,12 +27,12 @@
     "static/media/content_0102.jpg": "/mjtextile/static/media/content_0102.6239973e0e0231b58648.jpg",
     "static/media/logo_nobg.png": "/mjtextile/static/media/logo_nobg.adb788bfa9be283f762d.png",
     "index.html": "/mjtextile/index.html",
-    "main.983d6a4f.css.map": "/mjtextile/static/css/main.983d6a4f.css.map",
-    "main.15f6147c.js.map": "/mjtextile/static/js/main.15f6147c.js.map",
+    "main.829f3349.css.map": "/mjtextile/static/css/main.829f3349.css.map",
+    "main.2d239db3.js.map": "/mjtextile/static/js/main.2d239db3.js.map",
     "453.b1ae372a.chunk.js.map": "/mjtextile/static/js/453.b1ae372a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.983d6a4f.css",
-    "static/js/main.15f6147c.js"
+    "static/css/main.829f3349.css",
+    "static/js/main.2d239db3.js"
   ]
 }
