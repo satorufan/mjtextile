@@ -1,27 +1,36 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './home.css';
-import mainlogo from './img/home/mainlogo.jpg';
+import mainlogo from './img/home/mjtex_logo_main.gif';
+import mainbg from './img/home/6319.jpg';
+import mainparagliding from './img/home/paragliding-4037231_1280.png'
 import img1 from './img/home/lalit-kumar-uDoezY1cPLY-unsplash.jpg';
 import img2 from './img/home/fabric-5259683_1280.jpg';
 import img3 from './img/home/kevin-limbri-wPzxDaQm8fE-unsplash.jpg';
 
 const slogans = [
     {
-        txt: <img className='main-mainlogo' src={mainlogo}></img>,
+        txt: <div className='main-home-banner'>
+                <div className='main-home-leftside'>
+                    <img className='main-mainlogo' src={mainlogo}></img>
+                </div>
+                <div className='main-home-rightside'>
+                    <img className='main-mainparagliding' src={mainparagliding}></img>
+                </div>
+            </div>,
         img: ''
     },
-    {
-        txt: <div>The Best in Textile <br/> Myungjin Textile</div>,
-        img: img1
-    },
-    {
-        txt: <div>Quality You Can Trust <br/> Myungjin Textile</div>,
-        img: img2
-    },
-    {
-        txt: <div>Innovation in Every Thread <br/> Myungjin Textile</div>,
-        img: img3
-    }
+    // {
+    //     txt: <div>The Best in Textile <br/> Myungjin Textile</div>,
+    //     img: img1
+    // },
+    // {
+    //     txt: <div>Quality You Can Trust <br/> Myungjin Textile</div>,
+    //     img: img2
+    // },
+    // {
+    //     txt: <div>Innovation in Every Thread <br/> Myungjin Textile</div>,
+    //     img: img3
+    // }
 ];
 
 function Home() {
@@ -95,7 +104,8 @@ function Home() {
                         key={idx}
                         className={`slide ${idx === currentIndex ? 'active' : ''}`}
                         style={{
-                            backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slogan.img})`,
+                            backgroundImage: `url(${mainbg})`,
+                            backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(${mainbg})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
@@ -103,12 +113,13 @@ function Home() {
                             transition: 'opacity 1.5s ease-in-out'
                         }}
                     >
-                        <div className={`home-slogan${idx-1} ${idx === currentIndex ? '' : 'hidden'}`}>
+                        {/* <div className={`home-slogan${idx-1} ${idx === currentIndex ? '' : 'hidden'}`}>
                             {slogan.txt}
-                        </div>
+                        </div> */}
+                        {slogan.txt}
                     </div>
                 ))}
-                <button
+                {/* <button
                     className="prev"
                     onClick={(e) => { e.stopPropagation(); handleButtonClick('prev'); }}
                     disabled={isButtonDisabled}  // 버튼 비활성화 상태
@@ -121,9 +132,9 @@ function Home() {
                     disabled={isButtonDisabled}  // 버튼 비활성화 상태
                 >
                     &#10095;
-                </button>
+                </button> */}
             </div>
-            <div className="slide-timer" style={{ width: '100%', height: '4px', backgroundColor: 'gray', position: 'relative' }}>
+            {/* <div className="slide-timer" style={{ width: '100%', height: '4px', backgroundColor: 'gray', position: 'relative' }}>
                 <div style={{
                     width: `${(progress / interval) * 100 + 5}%`,
                     height: '100%',
@@ -131,7 +142,7 @@ function Home() {
                     position: 'absolute',
                     transition: 'width 100ms linear',
                 }}></div>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -1,5 +1,6 @@
 .contact {
-    font-family: "GabiaMaeumgyeol";
+    /* font-family: "GabiaMaeumgyeol"; */
+    font-family: 'Times New Roman', Times, serif;
     width: 100%;
     animation: fadeIn 0.3s ease-in-out;
 }
@@ -29,8 +30,9 @@
 
 
   .contact-location {
-    min-height: 500px;
-    height: 60vh;
+    min-height: 400px;
+    height: 60vw;
+    max-height: 600px;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #ddd;
@@ -70,7 +72,7 @@
   
   .contact-location-map {
     height: 100%;
-    background-size: 800px;
+    background-size: 80vw;
   }
 
 
@@ -139,7 +141,7 @@
     }
 
     .contact-location-map{
-      background-size: 100vh;
+      background-size: 600px;
     }
 
     .contact-inquiry {
@@ -151,11 +153,11 @@
     
 
     .contact-inquiry-left-content {
-      width: 90%;
+      width: 100%;
       min-width: 300px;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1vh; /* 각 항목 간의 간격 */
+      gap: 10px; /* 각 항목 간의 간격 */
       padding: 20px;
     }
 

@@ -34,8 +34,7 @@ function Contact () {
                     <div className='contact-location-title'>LOCATION</div>
                     <div className='contact-location-title-line'></div>
                     <div className='contact-location-detail'>
-                        100-32 Galsan-dong, Dalseo District, Daegu <br/>
-                        10F, Myungjin Textile
+                        ZIP 42703, Unit 1010, 329 Seongseo-Ro, Dalseo-Gu, Daegu, Republic of KOREA
                     </div>
                 </div>
 
@@ -54,7 +53,7 @@ function Contact () {
             <div className='contact-inquiry'
             style={{
                 backgroundImage: `url(${inquiry})`,
-                backgroundSize: 'cover',
+                backgroundSize: '1500px',
                 backgroundPosition: '50% 100%',
                 backgroundRepeat: 'no-repeat'
             }}>
@@ -62,14 +61,14 @@ function Contact () {
                     <div className="contact-inquiry-left-content">
                         <div className='contact-inquiry-item'>
                             <div className='contact-inquiry-item-title'>ADDRESS</div>
-                            <div className='contact-inquiry-item-detail'>MYUNGJIN TEXTILE 2F, 256-3, Cheongsu ro, Suseong-gu, Daegu, Republic of Korea</div>
+                            <div className='contact-inquiry-item-detail'>ZIP 42703, Unit 1010, 329 Seongseo-Ro, Dalseo-Gu, Daegu, Republic of KOREA</div>
                         </div>
 
                         {/* Tel Section */}
                         <div className="contact-inquiry-item">
                             <div className="contact-inquiry-item-title"><b>TEL</b></div>
                             <div className="contact-inquiry-item-detail">
-                                +82-53-626-2006~2
+                                +82-53-626-2061~2
                             </div>
                         </div>
 

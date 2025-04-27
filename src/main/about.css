@@ -209,10 +209,12 @@
     }
 
     .about-description-elem-section {
-      padding-top: 10vh;
-      padding-bottom: 10vh;
+      padding-top: 50px;
+      padding-bottom: 50px;
       text-align: center;
       width: 100vw;
+      height: 60vh;
+      min-height: 350px;
       position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
       top: 30%; /* 세로 중앙 정렬 */
       left: 100%; /* 가로 중앙 정렬 */
@@ -225,7 +227,7 @@
       transform: translate(-50%, -50%);
       gap: 20px;
       position: absolute;
-      top: 15vh; /* 세로 중앙 정렬 */
+      top: 20vh; /* 세로 중앙 정렬 */
       left: 100%; /* 가로 중앙 정렬 */
       width: 100vw;
     }
