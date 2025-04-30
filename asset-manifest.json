@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mjtextile/static/css/main.829f3349.css",
-    "main.js": "/mjtextile/static/js/main.2d239db3.js",
+    "main.css": "/mjtextile/static/css/main.882efa86.css",
+    "main.js": "/mjtextile/static/js/main.aa7fb71e.js",
     "static/js/453.b1ae372a.chunk.js": "/mjtextile/static/js/453.b1ae372a.chunk.js",
     "static/media/greet.gif": "/mjtextile/static/media/greet.4b68f430666cde292b03.gif",
     "static/media/banner.jpg": "/mjtextile/static/media/banner.c5116fe2d86dc568dce3.jpg",
@@ -14,25 +14,27 @@
     "static/media/susan-wilkinson-y9QJFGvdLWk-unsplash.jpg": "/mjtextile/static/media/susan-wilkinson-y9QJFGvdLWk-unsplash.a7502e181be44df34263.jpg",
     "static/media/GabiaMaeumgyeol.ttf": "/mjtextile/static/media/GabiaMaeumgyeol.c4d58dd4e6c4ba2e8a85.ttf",
     "static/media/top-view-fabric-texture.jpg": "/mjtextile/static/media/top-view-fabric-texture.6e794fd00b1720596014.jpg",
+    "static/media/6319.jpg": "/mjtextile/static/media/6319.566af033e8c352f1909f.jpg",
     "static/media/banner2.jpg": "/mjtextile/static/media/banner2.dae1d1f2f3a5afcd128c.jpg",
     "static/media/001.png": "/mjtextile/static/media/001.51611ed585f5a5949c0d.png",
     "static/media/fabric-5259683_1280.jpg": "/mjtextile/static/media/fabric-5259683_1280.7ffd6b6d8996038a8184.jpg",
-    "static/media/mainlogo.jpg": "/mjtextile/static/media/mainlogo.dc787060a83258a37347.jpg",
     "static/media/002.png": "/mjtextile/static/media/002.394b6be6379e4eb4522c.png",
     "static/media/inquiry3.jpg": "/mjtextile/static/media/inquiry3.7ef93fdc1f6811dbecee.jpg",
     "static/media/parachute.jpg": "/mjtextile/static/media/parachute.4792ade45a4c88598df7.jpg",
+    "static/media/paragliding-4037231_1280.png": "/mjtextile/static/media/paragliding-4037231_1280.fe777db8bf19117c7e29.png",
     "static/media/paragliding.jpg": "/mjtextile/static/media/paragliding.991a310137fb10625d24.jpg",
     "static/media/military.jpg": "/mjtextile/static/media/military.8edd2e591265ccd7bf85.jpg",
     "static/media/location.jpg": "/mjtextile/static/media/location.a99fdd89ec13df71a0e5.jpg",
     "static/media/content_0102.jpg": "/mjtextile/static/media/content_0102.6239973e0e0231b58648.jpg",
+    "static/media/mjtex_logo_main.gif": "/mjtextile/static/media/mjtex_logo_main.0450497a935f11886112.gif",
     "static/media/logo_nobg.png": "/mjtextile/static/media/logo_nobg.adb788bfa9be283f762d.png",
     "index.html": "/mjtextile/index.html",
-    "main.829f3349.css.map": "/mjtextile/static/css/main.829f3349.css.map",
-    "main.2d239db3.js.map": "/mjtextile/static/js/main.2d239db3.js.map",
+    "main.882efa86.css.map": "/mjtextile/static/css/main.882efa86.css.map",
+    "main.aa7fb71e.js.map": "/mjtextile/static/js/main.aa7fb71e.js.map",
     "453.b1ae372a.chunk.js.map": "/mjtextile/static/js/453.b1ae372a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.829f3349.css",
-    "static/js/main.2d239db3.js"
+    "static/css/main.882efa86.css",
+    "static/js/main.aa7fb71e.js"
   ]
 }
