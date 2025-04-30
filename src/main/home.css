@@ -1,12 +1,10 @@
 .main-home {
-  position: relative;
-  width: 100%;
   height: 50vw;
-  max-height: 500px;
+  max-height: 600px;
   min-height: 400px;
-  opacity: 0; /* 초기 opacity 0 */
-  transform: translateY(20px); /* 초기 위치를 아래로 설정 */
-  animation: fadeInUp 0.8s ease-in-out forwards; /* 애니메이션 적용 */
+  /* opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards; */
 }
 
 @keyframes fadeInUp {
@@ -48,19 +46,84 @@
   .main-home-leftside{
     background: linear-gradient(90deg, rgb(63, 153, 255) 0%, rgba(63, 153, 255, 1) 70%, rgba(255, 255, 255, 0) 100%);
     width: 50%;
+    height: 100%;
   }
   .main-mainlogo {
+    padding: 10px;
+    margin: 150px 0px 50px 2vw;
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    height: 5vw;
-    background-color: white;
+    height: 8vw;
+    min-height: 120px;
+    max-height: 180px;
+    /* background-color: rgb(185, 204, 255); */
+    border-radius: 5px;
+  }
+  .main-logo-slogan {
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 줄 세움 */
+    align-items: flex-start; /* 왼쪽 정렬 (또는 center, 원하는 대로) */
+    margin-left: 8vw;
+  }
+  
+  .slogan-line {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 5vw;
+    animation: fadeInLine 1s 1s ease forwards;
+    background-color: rgba(36, 36, 214, 0.5);
+    padding: 0.4em 0.6em; /* 배경 여백 살짝 추가 */
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  
+  .slogan-line.delay {
+    animation-delay: 1.5s;
+    margin-left: 7vw;
+    margin-top: -1.5rem;
+    background-color: rgba(55, 55, 255, 0.3);
+  }
+  @keyframes fadeInLine {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
+  .main-home-rightside{
+    width: 50%;
+    margin-top: 20vh;
+    text-align: end;
+  }
   .main-mainparagliding {
     height: 20vw;
+    min-height: 150px;
+    max-height: 350px;
     filter: brightness(0) invert(1);
+    margin-right: 15vw;
+    animation: paragliding-fly 10s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    transform-origin: center;
   }
+  
+  @keyframes paragliding-fly {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    25% {
+      transform: translate(5px, -8px) rotate(1.5deg);
+    }
+    50% {
+      transform: translate(-6px, -4px) rotate(-1.5deg);
+    }
+    75% {
+      transform: translate(4px, 6px) rotate(1deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+  
+  
 
   .home-slogan0{
     position: absolute;
@@ -147,5 +210,57 @@
     button:hover {
       background-color: rgba(0, 0, 0, 0);
       transition: 0.5s;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .main-home-banner{
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    .main-home-leftside{
+      background: linear-gradient(180deg, rgb(63, 153, 255) 0%, rgba(63, 153, 255, 1) 70%, rgba(255, 255, 255, 0) 100%);
+      width: 100%;
+      height: 50%;
+    }
+    .main-mainlogo {
+      height: 100%;
+      margin-top: 3vh;
+      margin-left: 48vw;
+      overflow: hidden;
+      height: 12vw;
+      min-height: 80px;
+      max-height: 120px;
+      /* background-color: rgb(185, 204, 255); */
+      border-radius: 5px;
+    }
+    .main-logo-slogan {
+      display: flex;
+      flex-direction: column; /* 위에서 아래로 줄 세움 */
+      align-items: flex-start; /* 왼쪽 정렬 (또는 center, 원하는 대로) */
+      margin-left: 1vw;
+      margin-top: -50px;
+    }
+    
+    .slogan-line {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 500;
+      margin-left: 1vw;
+      animation: fadeInLine 1s 1s ease forwards;
+      background-color: rgba(36, 36, 214, 0.5);
+      padding: 0.4em 0.6em; /* 배경 여백 살짝 추가 */
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    .main-home-rightside{
+      width: 100%;
+      margin-top: 0vh;
+      text-align: center;
+    }
+    .main-mainparagliding {
+      margin-left: 50vw;
+      animation: paragliding-fly 10s infinite;
     }
   }

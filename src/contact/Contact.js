@@ -2,20 +2,29 @@ import './contact.css';
 import banner from './img/banner.jpg';
 import location from './img/location.jpg';
 import inquiry from './img/inquiry3.jpg';
-import { useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 function Contact () {
-    const [email, setEmail] = useState('');
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [company, setCompany] = useState('');
-    const [message, setMessage] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [name, setName] = useState('');
+    // const [phone, setPhone] = useState('');
+    // const [company, setCompany] = useState('');
+    // const [message, setMessage] = useState('');
 
-    const handleEmailChange = (e) => setEmail(e.target.value);
-    const handleNameChange = (e) => setName(e.target.value);
-    const handlePhoneChange = (e) => setPhone(e.target.value);
-    const handleCompanyChange = (e) => setCompany(e.target.value);
-    const handleMessageChange = (e) => setMessage(e.target.value);
+    // const handleEmailChange = (e) => setEmail(e.target.value);
+    // const handleNameChange = (e) => setName(e.target.value);
+    // const handlePhoneChange = (e) => setPhone(e.target.value);
+    // const handleCompanyChange = (e) => setCompany(e.target.value);
+    // const handleMessageChange = (e) => setMessage(e.target.value);
+    const mapRef = useRef(null);
+
+    const handleImageLoad = () => {
+        const mapContainer = mapRef.current;
+        if (mapContainer) {
+          mapContainer.scrollLeft = mapContainer.scrollWidth;
+          mapContainer.scrollTop = mapContainer.scrollHeight;
+        }
+      };
     
     return (
         <div className="contact">
@@ -39,13 +48,13 @@ function Contact () {
                 </div>
 
                 <div className='contact-location-rightside'>
-                    <div className='contact-location-map'
+                    <div className='contact-location-map' ref={mapRef}
                     style={{
-                        backgroundImage: `url(${location})`,
+                        // backgroundImage: `url(${})`,
                         backgroundPosition: '100% 100%',
                         backgroundRepeat: 'no-repeat'
                     }}>
-                        
+                        <img onLoad={handleImageLoad} src={location}></img>
                     </div>
                 </div>
             </div>
@@ -53,7 +62,7 @@ function Contact () {
             <div className='contact-inquiry'
             style={{
                 backgroundImage: `url(${inquiry})`,
-                backgroundSize: '1500px',
+                backgroundSize: '2500px',
                 backgroundPosition: '50% 100%',
                 backgroundRepeat: 'no-repeat'
             }}>

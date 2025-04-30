@@ -30,7 +30,7 @@
 
 
   .contact-location {
-    min-height: 400px;
+    min-height: 450px;
     height: 60vw;
     max-height: 600px;
     display: flex;
@@ -43,7 +43,7 @@
     margin-right: 10%;
   }
   .contact-location-rightside {
-    width: 60%;
+    width: 50%;
   }
   
   .contact-location-title {
@@ -72,15 +72,21 @@
   
   .contact-location-map {
     height: 100%;
-    background-size: 80vw;
+    background-size: 800px;
+    overflow: auto;
+    text-align: end;
+    position: relative;
   }
 
+  .contact-location-map img {
+    width: 800px;
+  }
 
 
 
   
   .contact-inquiry {
-    background-color: #333;
+    background-color: #ffffff;
     height: 80vh;
     min-height: 600px;
     display: grid;
@@ -140,8 +146,9 @@
       width: 50%;
     }
 
-    .contact-location-map{
-      background-size: 600px;
+
+    .contact-location-map img {
+      width: 600px;
     }
 
     .contact-inquiry {

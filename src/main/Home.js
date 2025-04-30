@@ -6,12 +6,18 @@ import mainparagliding from './img/home/paragliding-4037231_1280.png'
 import img1 from './img/home/lalit-kumar-uDoezY1cPLY-unsplash.jpg';
 import img2 from './img/home/fabric-5259683_1280.jpg';
 import img3 from './img/home/kevin-limbri-wPzxDaQm8fE-unsplash.jpg';
+import { Parallax } from 'react-parallax';
 
 const slogans = [
     {
-        txt: <div className='main-home-banner'>
+        txt: 
+            <div className='main-home-banner'>
                 <div className='main-home-leftside'>
                     <img className='main-mainlogo' src={mainlogo}></img>
+                    <div className='main-logo-slogan'>
+                        <p className='slogan-line'>Weaving the Future</p>
+                        <p className='slogan-line delay'>With Myungjin Textile</p>
+                    </div>
                 </div>
                 <div className='main-home-rightside'>
                     <img className='main-mainparagliding' src={mainparagliding}></img>
@@ -91,12 +97,35 @@ function Home() {
             prevSlide();
         }
     };
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //       const slides = document.querySelectorAll('.slide');
+    //       const scrollY = window.scrollY;
+      
+    //       slides.forEach((slide) => {
+    //         slide.style.transform = `translateY(${scrollY * 0.3}px)`; // 속도 조절
+    //       });
+    //     };
+      
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    //   }, []);
     
     useEffect(() => {
         startTimer();
     }, []);
 
     return (
+        <Parallax 
+            bgImage={mainbg}  // mainbg는 이미지 URL이어야 합니다.
+            strength={200}
+            bgImageStyle={{
+                backgroundPosition: 'center',
+                top: '-10vw',
+                filter: 'brightness(0.85)',
+            }}
+        >
         <div className="main-home">
             <div className="carousel">
                 {slogans.map((slogan, idx) => (
@@ -104,18 +133,13 @@ function Home() {
                         key={idx}
                         className={`slide ${idx === currentIndex ? 'active' : ''}`}
                         style={{
-                            backgroundImage: `url(${mainbg})`,
-                            backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(${mainbg})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            opacity: idx === currentIndex ? 1 : 0,
-                            transition: 'opacity 1.5s ease-in-out'
+                            // backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(${mainbg})`,
+                            // backgroundSize: 'cover',
+                            // backgroundPosition: 'center',
+                            // backgroundRepeat: 'no-repeat',
+                            // opacity: idx === currentIndex ? 1 : 0,
                         }}
                     >
-                        {/* <div className={`home-slogan${idx-1} ${idx === currentIndex ? '' : 'hidden'}`}>
-                            {slogan.txt}
-                        </div> */}
                         {slogan.txt}
                     </div>
                 ))}
@@ -144,6 +168,7 @@ function Home() {
                 }}></div>
             </div> */}
         </div>
+        </Parallax>
     );
 }
 
