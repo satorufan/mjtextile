@@ -100,8 +100,6 @@
 }
 
 .about-description-elem {
-    align-items: center;
-    justify-self: center;
     position: relative;
     width: 70%;
 }
@@ -201,23 +199,18 @@
     } */
 
     .about-description-elem {
-      align-items: center;
-      justify-self: center;
       left: -50%;
       top: 50%;
-      
     }
 
     .about-description-elem-section {
       padding-top: 50px;
       padding-bottom: 50px;
-      text-align: center;
       width: 100vw;
       height: 60vh;
       max-height: 400px;
       min-height: 350px;
       position: absolute; /* 슬라이드를 고정시키기 위한 absolute 설정 */
-      top: 30%; /* 세로 중앙 정렬 */
       left: 100%; /* 가로 중앙 정렬 */
       transform: translate(-50%, -50%); /* 정확한 중앙 위치로 맞추기 위해 translate 사용 */
       border-radius: 10px;

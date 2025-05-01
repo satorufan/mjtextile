@@ -207,15 +207,16 @@
     }
     
     .products-menu:hover {
-        height: 100px;
-        width: 30%;
+        height: 20vw;
+        width: 25%;
     }
 
     .products-menu {
         width: 20%;
-        min-width: 80px;
-        height: 100px;
+        min-width: 50px;
+        height: 20vw;
         min-height: 50px;
+        max-height: 120px;
         font-size: 2vw;
         cursor: pointer;
         transition: background-size 0.3s ease, width 1s ease, height 1s ease;
@@ -229,8 +230,7 @@
 
     .products-menu.selected {
         width: 30%;
-        height: 100px;
-        min-height: 50px;
+        height: 20vw;
         font-size: 2vw;
         cursor: pointer;
         border-radius: 20px;
