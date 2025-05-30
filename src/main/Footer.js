@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className="main-footer">
             <div className="footer-top">
-                <div className="footer-title">MJTEX Co., Ltd.</div>
+                <div className="footer-title">MJ TEX Co., Ltd.</div>
                 <div className="footer-logo"><Link to="/"><img src={logo}></img></Link></div>
             </div>
 
@@ -26,7 +26,7 @@ function Footer() {
             </div>
 
             <div className="footer-copyright">
-                COPYRIGHT (C) 2010 MYUNGJIN TEXTILE CO., LTD ALL RIGHTS RESERVED
+                COPYRIGHT (C) 2010 MJ TEX CO., LTD ALL RIGHTS RESERVED
             </div>
         </div>
     );

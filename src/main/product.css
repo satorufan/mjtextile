@@ -73,8 +73,8 @@
 }
 
 .product-shortcut {
-    width: 20%;
-    min-width: 100px;
+    width: 10%;
+    min-width: 60px;
     padding: 10px;
     font-size: 1rem;
     background-color: #d6b4b4;

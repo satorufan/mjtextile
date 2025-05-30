@@ -16,7 +16,7 @@ const slogans = [
                     <img className='main-mainlogo' src={mainlogo}></img>
                     <div className='main-logo-slogan'>
                         <p className='slogan-line'>Weaving the Future</p>
-                        <p className='slogan-line delay'>With Myungjin Textile</p>
+                        <p className='slogan-line delay'>With MJ TEX Co., Ltd.</p>
                     </div>
                 </div>
                 <div className='main-home-rightside'>
